@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:4326").setExtent([112.535235, -8.121126, 112.874192, -7.927608]);
+//ol.proj.get("EPSG:4326").setExtent([112.471049, -8.064393, 112.810006, -7.870875]);
 var wms_layers = [];
 
 
@@ -79,7 +79,7 @@ var lyr_Healthcare_4 = new ol.layer.Vector({
                 source:jsonSource_Healthcare_4, 
                 style: style_Healthcare_4,
                 popuplayertitle: "Healthcare",
-                interactive: true,
+                interactive: false,
     title: 'Healthcare<br />\
     <img src="styles/legend/Healthcare_4_0.png" /> Clinic<br />\
     <img src="styles/legend/Healthcare_4_1.png" /> Hospital<br />'

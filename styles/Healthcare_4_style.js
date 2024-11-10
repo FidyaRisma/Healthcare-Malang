@@ -8,7 +8,7 @@ function categories_Healthcare_4(feature, value, size, resolution, labelText,
                     return [
                         new ol.style.Style({
                             image: new ol.style.Circle({
-                                radius: 15, 
+                                radius: 10, 
                                 fill: new ol.style.Fill({ color: 'rgba(255, 255, 255, 0)' }) 
                             }),
                             text: createTextStyle(feature, resolution, labelText, labelFont,
@@ -30,7 +30,7 @@ function categories_Healthcare_4(feature, value, size, resolution, labelText,
                         return [
                             new ol.style.Style({
                                 image: new ol.style.Circle({
-                                    radius: 15, 
+                                    radius: 10, 
                                     fill: new ol.style.Fill({ color: 'rgba(255, 255, 255, 0)' }) 
                                 }),
                                 text: createTextStyle(feature, resolution, labelText, labelFont,

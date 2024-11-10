@@ -18,7 +18,7 @@ function categories_Healthcare_4(feature, value, size, resolution, labelText,
                         new ol.style.Style({
                             image: new ol.style.Icon({
                                 scale: 1.2 + size, 
-                                src: 'C:/Users/user/Documents/GitHub/Healthcare-Malang/styles/legend/Healthcare_4_0.png'  // 
+                                src: '/Healthcare-Malang/styles/legend/Healthcare_4_0.png'  // 
                             }),
                             text: createTextStyle(feature, resolution, labelText, labelFont,
                                                   labelFill, placement, bufferColor,
@@ -40,7 +40,7 @@ function categories_Healthcare_4(feature, value, size, resolution, labelText,
                             new ol.style.Style({
                                 image: new ol.style.Icon({
                                     scale: 1.5 + size, 
-                                    src: 'C:/Users/user/Documents/GitHub/Healthcare-Malang/styles/legend/Healthcare_4_1.png'  
+                                    src: '/Healthcare-Malang/styles/legend/Healthcare_4_1.png'  
                                 }),
                                 text: createTextStyle(feature, resolution, labelText, labelFont,
                                                       labelFill, placement, bufferColor,

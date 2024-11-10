@@ -5,35 +5,52 @@ function categories_Healthcare_4(feature, value, size, resolution, labelText,
                        placement) {
                 var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
                 switch(valueStr) {case 'Clinic':
-                    return [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 10.4 + size,
-            stroke: new ol.style.Stroke({color: 'rgba(0,0,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(0,0,255,1.0)'})}),
-        text: createTextStyle(feature, resolution, labelText, labelFont,
-                              labelFill, placement, bufferColor,
-                              bufferWidth)
-    }),new ol.style.Style({
-        image: new ol.style.Circle({radius: 6.0 + size,
-            stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.76}), fill: new ol.style.Fill({color: 'rgba(255,255,255,1.0)'})}),
-        text: createTextStyle(feature, resolution, labelText, labelFont,
-                              labelFill, placement, bufferColor,
-                              bufferWidth)
-    })];
+                    return [
+                        new ol.style.Style({
+                            image: new ol.style.Circle({
+                                radius: 15, 
+                                fill: new ol.style.Fill({ color: 'rgba(255, 255, 255, 0)' }) 
+                            }),
+                            text: createTextStyle(feature, resolution, labelText, labelFont,
+                                                  labelFill, placement, bufferColor,
+                                                  bufferWidth)
+                        }),
+                        new ol.style.Style({
+                            image: new ol.style.Icon({
+                                scale: 1.2 + size, 
+                                src: 'C:/Users/user/Documents/GitHub/Healthcare-Malang/styles/legend/Healthcare_4_0.png'  // 
+                            }),
+                            text: createTextStyle(feature, resolution, labelText, labelFont,
+                                                  labelFill, placement, bufferColor,
+                                                  bufferWidth)
+                        })
+                    ];
                     break;
-case 'Hospital':
-                    return [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 14.0 + size,
-            stroke: new ol.style.Stroke({color: 'rgba(227,26,28,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(255,255,255,1.0)'})}),
-        text: createTextStyle(feature, resolution, labelText, labelFont,
-                              labelFill, placement, bufferColor,
-                              bufferWidth)
-    }),new ol.style.Style({
-        image: new ol.style.Circle({radius: 7.0 + size,
-            stroke: new ol.style.Stroke({color: 'rgba(227,26,28,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.76}), fill: new ol.style.Fill({color: 'rgba(227,26,28,1.0)'})}),
-        text: createTextStyle(feature, resolution, labelText, labelFont,
-                              labelFill, placement, bufferColor,
-                              bufferWidth)
-    })];
-                    break;}};
+                    case 'Hospital':
+                        return [
+                            new ol.style.Style({
+                                image: new ol.style.Circle({
+                                    radius: 15, 
+                                    fill: new ol.style.Fill({ color: 'rgba(255, 255, 255, 0)' }) 
+                                }),
+                                text: createTextStyle(feature, resolution, labelText, labelFont,
+                                                      labelFill, placement, bufferColor,
+                                                      bufferWidth)
+                            }),
+                            new ol.style.Style({
+                                image: new ol.style.Icon({
+                                    scale: 1.5 + size, 
+                                    src: 'C:/Users/user/Documents/GitHub/Healthcare-Malang/styles/legend/Healthcare_4_1.png'  
+                                }),
+                                text: createTextStyle(feature, resolution, labelText, labelFont,
+                                                      labelFill, placement, bufferColor,
+                                                      bufferWidth)
+                            })
+                        ];
+                    
+                        break;
+                }
+            }
 
 var style_Healthcare_4 = function(feature, resolution){
     var context = {

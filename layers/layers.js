@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:4326").setExtent([112.471049, -8.064393, 112.810006, -7.870875]);
+//ol.proj.get("EPSG:4326").setExtent([112.476999, -8.079177, 112.815956, -7.885659]);
 var wms_layers = [];
 
 
@@ -14,13 +14,13 @@ var wms_layers = [];
                 url: 'https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}'
             })
         });
-var lyr_Heatmap_1 = new ol.layer.Image({
+var lyr_HeatmapKernelDensity_1 = new ol.layer.Image({
                             opacity: 1,
-                            title: "Heatmap",
+                            title: "Heatmap (Kernel Density)",
                             
                             
                             source: new ol.source.ImageStatic({
-                               url: "./layers/Heatmap_1.png",
+                               url: "./layers/HeatmapKernelDensity_1.png",
     attributions: ' ',
                                 projection: 'EPSG:4326',
                                 alwaysInRange: true,
@@ -79,14 +79,14 @@ var lyr_Healthcare_4 = new ol.layer.Vector({
                 source:jsonSource_Healthcare_4, 
                 style: style_Healthcare_4,
                 popuplayertitle: "Healthcare",
-                interactive: false,
+                interactive: true,
     title: 'Healthcare<br />\
     <img src="styles/legend/Healthcare_4_0.png" /> Clinic<br />\
     <img src="styles/legend/Healthcare_4_1.png" /> Hospital<br />'
         });
 
-lyr_Gmaps_0.setVisible(true);lyr_Heatmap_1.setVisible(true);lyr_RoadClass_2.setVisible(true);lyr_SubdistrictBoundary_3.setVisible(true);lyr_Healthcare_4.setVisible(true);
-var layersList = [lyr_Gmaps_0,lyr_Heatmap_1,lyr_RoadClass_2,lyr_SubdistrictBoundary_3,lyr_Healthcare_4];
+lyr_Gmaps_0.setVisible(true);lyr_HeatmapKernelDensity_1.setVisible(true);lyr_RoadClass_2.setVisible(true);lyr_SubdistrictBoundary_3.setVisible(true);lyr_Healthcare_4.setVisible(true);
+var layersList = [lyr_Gmaps_0,lyr_HeatmapKernelDensity_1,lyr_RoadClass_2,lyr_SubdistrictBoundary_3,lyr_Healthcare_4];
 lyr_RoadClass_2.set('fieldAliases', {'highway': 'Class', });
 lyr_SubdistrictBoundary_3.set('fieldAliases', {'WADMKC': 'Subdistrict', 'ID': 'ID', });
 lyr_Healthcare_4.set('fieldAliases', {'healthcare': 'Type', 'source': 'Category', 'name': 'Name', 'WADMKC': 'Subdistrict', 'id': 'id', });
